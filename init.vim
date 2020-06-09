@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'                 " Better Visual Guide
 Plug 'w0rp/ale'                            " syntax check
 Plug 'Chiel92/vim-autoformat'              " Formater
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -55,22 +56,7 @@ set nowritebackup
 " Search configuration
 set ignorecase                    " ignore case when searching
 set smartcase                     " turn on smartcase
-
-" Tab and Indent configuration
-set expandtab
-set tabstop=4
-set shiftwidth=4
  
-" Ale
-let g:ale_lint_on_enter = 0 
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_linters = {'python': ['flake8']}
-let g:ale_python_flake8_use_global = 1
-
 " Airline (status bar)
 let g:airline_left_sep  = ''
 let g:airline_right_sep = ''
